@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+  <label>
+    Nombre:
+    <input [(ngModel)]="client.name" name="name" required />
+  </label>
+  <br />
+  <label>
+    Correo electrónico:
+    <input [(ngModel)]="client.email" name="email" required email />
+  </label>
+  <br />
+  <div class="token-box">
+    <p>Token de seguridad</p>
+    <input [(ngModel)]="token" name="token" maxlength="8" />
+  </div>
+  <button type="submit">Registrar</button>
+</form>
